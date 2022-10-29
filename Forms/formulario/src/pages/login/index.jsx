@@ -4,7 +4,7 @@ import * as yup from "yup";
 
 import { Input } from "../../components/Input";
 
-import { api } from './../../services/api.js'
+import { api } from './../../services/api'
 
 const schema = yup.object({
     email: yup.string().email("E-mail não é valido").required("Campo Obrigatório"),
@@ -12,16 +12,21 @@ const schema = yup.object({
 }).required();
 
 const Login = () => {
-    const { control, handleSubmit , formState: { errors } } = useForm(
+    const { control, handleSubmit } = useForm(
         {resolver: yupResolver(schema),
         mode: onchange,
     }); 
 
-    const onSubmit = data => {
+    const onSubmit = async formData => {
         try {
-            const {}
+            const { data } = await api.get(`users?email=${formData.email}&senha=${formData.senha}`);
+            if (data.length === 1) {
+                alert("Logado com Sucesso")
+            } else {
+                alert("Email ou senha inválido");
+            }
         } catch (error) {
-            alert('Ouve um erro, tente novamente')
+            alert('Houve um erro, tente novamente')
         }
     };
 

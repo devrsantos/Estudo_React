@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
-
 const Nav = () => {
   return (
         <nav>
@@ -10,3 +7,5 @@ const Nav = () => {
         </nav>
   )
 }
+
+export { Nav }

@@ -16,9 +16,9 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
-        "baseUrl": ".",
+        "baseUrl": "./src",
         "paths": {
-            // "@config/*": ["./src/config/*"]
+            "@components/*": ["./components/*"]
         }
     },
     "include": ["src/**/*"],

@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "target": "es2017",
+        "lib": ["ES6", "ES2015", "DOM"],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "commonjs",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "moduleResolution": "node",
+        "typeRoots": ["./node_modules/@types", "./src/@types"],
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "removeComments": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            // "@config/*": ["./src/config/*"]
+        }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["./node_modules", "./dist/**/*.*"]
+}
